@@ -12,12 +12,12 @@ const userData=[];
 let nameU='';
 
 app.get('/',function(req,res){
-    res.sendFile(__dirname+"/public/homepage.html")
+    res.sendFile(__dirname+"/homepage.html")
 })
 
 app.get('/todohome',function(req,res){
         
-        res.sendFile(__dirname + "/public/index.html")
+        res.sendFile(__dirname + "/index.html")
 
 })
 
@@ -98,7 +98,7 @@ app.delete('/todohome',function(req,res){
 })
 
 app.get('/signup',function(req,res){
-    res.sendFile(__dirname+'/public/signup.html')
+    res.sendFile(__dirname+'/signup.html')
 })
 
 app.post('/signup',function(req,res){
@@ -120,7 +120,7 @@ app.post('/signup',function(req,res){
 })
 
 app.get('/login',function(req,res){
-    res.sendFile(__dirname+'/public/login.html')
+    res.sendFile(__dirname+'/login.html')
 })
 
 app.post('/login',function(req,res){
@@ -130,7 +130,7 @@ app.post('/login',function(req,res){
     getUserInfo(email,password,function(error){
         if (error) {
            res.status(404);
-           res.sendFile(__dirname+'/public/userillegal.html')
+           res.sendFile(__dirname+'/userillegal.html')
             
         }
         else{
@@ -140,12 +140,12 @@ app.post('/login',function(req,res){
 })
 
 app.get('/styles.css',function(req,res){
-    res.sendFile(__dirname + "/public/styles.css")
+    res.sendFile(__dirname + "/styles.css")
 })
 
 
 app.get('/index.js',function(req,res){
-    res.sendFile(__dirname + "/public/index.js")
+    res.sendFile(__dirname + "/index.js")
 })
 
 
